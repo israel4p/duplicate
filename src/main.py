@@ -3,11 +3,12 @@
 # Desenvolvido por Israel P. da Silva <israel4p@gmail.com>
 # License: MIT
 
+from getpass import getpass
 import os
 import re
 import socket
-from paramiko import SSHClient, AutoAddPolicy, ssh_exception
-from getpass import getpass
+
+from paramiko import AutoAddPolicy, SSHClient, ssh_exception
 
 
 def acesso_ssh(username, password, hostname):
@@ -24,8 +25,9 @@ def acesso_ssh(username, password, hostname):
     ssh.set_missing_host_key_policy(AutoAddPolicy())
 
     try:
-        ssh.connect(hostname=hostname, username=username,
-                    password=password, timeout=10)
+        ssh.connect(
+            hostname=hostname, username=username, password=password, timeout=10
+        )
 
     except ssh_exception.AuthenticationException:
         print('Usuário ou senha incorreta.')
