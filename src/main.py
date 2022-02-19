@@ -41,6 +41,9 @@ def acesso_ssh(username, password, hostname):
     else:
         stdin, stdout, stderr = ssh.exec_command(cmd)
         logins = stdout.readlines()
+
+        stdin.close()
+        stderr.close()
         ssh.close()
 
         return logins
