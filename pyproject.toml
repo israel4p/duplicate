@@ -13,6 +13,10 @@ paramiko = "^2.9.2"
 pip-autoremove = "^0.10.0"
 pyinstaller = "^4.9"
 blue = "^0.7.0"
+prospector = "^1.6.0"
+pip-audit = "^2.0.0"
+isort = "^5.10.1"
+pytest = "^7.0.1"
 
 [build-system]
 requires = ["poetry-core>=1.0.0"]
