@@ -17,7 +17,7 @@ lint:
 	@echo "\e[33m\n* Checando imports...\e[m"
 	@isort . --check
 	@echo "\e[33m\n* Checando qualidade do código...\e[m"
-	@prospector --with-tool pep257 --doc-warning
+	@prospector --with-tool pep257 --doc-warning --profile-path ${PWD} --profile .prospector.yaml
 
 test:
 	@echo "\e[33m\n* Executando testes...\e[m"
