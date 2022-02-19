@@ -3,10 +3,10 @@
 # Desenvolvido por Israel P. da Silva <israel4p@gmail.com>
 # License: MIT
 
-from getpass import getpass
 import os
 import re
 import socket
+from getpass import getpass
 
 from paramiko import AutoAddPolicy, SSHClient, ssh_exception
 
